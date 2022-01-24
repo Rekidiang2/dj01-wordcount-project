@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+</head>
+<body>
+
+<h2>There are {{count}} word in your text</h2>
+
+<h1>Your text : </h1> <hr><br>
+
+{{fulltext}}
+
+<br><hr>
+
+<a href="{% url 'home' %}">Start Again</a>
+
+<h1>Word Count</h1>
+ 
+
+
+</body>
+
+
+{% for word, counttotal in worddict%}
+
+   <p>{{word}} : {{counttotal}}</p>
+  
+
+
+
+{% endfor %}
+
+<a href="{% url 'home' %}">Start Again</a>
